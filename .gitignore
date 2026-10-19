@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Editor & OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# EDA / Tool synthesis & simulation temporary files
+*.vcd
+*.vpd
+*.fsdb
+*.log
+novas.*
+*.key
+simv*
+csrc/
+work/
+transcript
+*.wlf
+INCA_libs/
+xcelium.d/

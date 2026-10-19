@@ -1,0 +1,556 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2240 750" width="2240" height="750">
+  <style>
+    .title { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 32px; font-weight: bold; fill: #1b263b; }
+    .subtitle { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; fill: #5d6d7e; }
+    .rail-label { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; }
+    .icg-title { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #154360; text-anchor: middle; }
+    .icg-sub { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; fill: #5d6d7e; text-anchor: middle; }
+    .icg-mode { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1f618d; text-anchor: middle; }
+    .ce-label { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1f618d; }
+    .dff-num { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #1b263b; text-anchor: middle; }
+    .dff-ce { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #1f618d; text-anchor: middle; }
+    .dff-text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; fill: #5d6d7e; text-anchor: middle; }
+    .seg-title { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #1b263b; text-anchor: middle; }
+    .seg-sub { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; fill: #5d6d7e; text-anchor: middle; }
+    .seg-mode { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; fill: #7f8c8d; text-anchor: middle; }
+    .footer-text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; fill: #5d6d7e; text-anchor: middle; }
+    .wire { stroke: #2980b9; stroke-width: 2; fill: none; }
+    .thin-wire { stroke: #2980b9; stroke-width: 1; fill: none; }
+    .icg-box { fill: #ebf5fb; stroke: #2980b9; stroke-width: 2; rx: 10; ry: 10; }
+    .dff-box { fill: #f8f9fa; stroke: #2980b9; stroke-width: 1.2; rx: 4; ry: 4; }
+    .divider { stroke: #d6dbdf; stroke-width: 1; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Header -->
+  <text x="60" y="55" class="title">36-bit Accumulator Register — Segment Clock-Enable Control</text>
+  <text x="60" y="85" class="subtitle">CLK is connected directly to every register clock pin; CE controls whether each register updates.</text>
+
+  <!-- Top CLK Rail -->
+  <text x="40" y="142" class="rail-label">CLK</text>
+  <line x1="85" y1="135" x2="2160" y2="135" class="wire"/>
+  <line x1="476" y1="135" x2="476" y2="165" class="wire"/>
+  <polygon points="472,160 480,160 476,166" fill="#2980b9"/>
+  <line x1="1148" y1="135" x2="1148" y2="165" class="wire"/>
+  <polygon points="1144,160 1152,160 1148,166" fill="#2980b9"/>
+  <line x1="1720" y1="135" x2="1720" y2="165" class="wire"/>
+  <polygon points="1716,160 1724,160 1720,166" fill="#2980b9"/>
+
+  <!-- ICG Block CE_S2 -->
+  <rect x="346" y="166" width="260" height="82" class="icg-box"/>
+  <text x="476" y="190" class="icg-title">LATCHED SEGMENT CE</text>
+  <text x="476" y="210" class="icg-sub">CONTROL LOGIC</text>
+  <text x="476" y="232" class="icg-mode">S2 · mode</text>
+  <line x1="476" y1="248" x2="476" y2="315" class="wire"/>
+  <text x="486" y="286" class="ce-label">CE_S2</text>
+
+  <!-- ICG Block CE_S1 -->
+  <rect x="1018" y="166" width="260" height="82" class="icg-box"/>
+  <text x="1148" y="190" class="icg-title">LATCHED SEGMENT CE</text>
+  <text x="1148" y="210" class="icg-sub">CONTROL LOGIC</text>
+  <text x="1148" y="232" class="icg-mode">S1 · mode</text>
+  <line x1="1148" y1="248" x2="1148" y2="315" class="wire"/>
+  <text x="1158" y="286" class="ce-label">CE_S1</text>
+
+  <!-- ICG Block CE_S0 -->
+  <rect x="1590" y="166" width="260" height="82" class="icg-box"/>
+  <text x="1720" y="190" class="icg-title">LATCHED SEGMENT CE</text>
+  <text x="1720" y="210" class="icg-sub">CONTROL LOGIC</text>
+  <text x="1720" y="232" class="icg-mode">S0 · mode</text>
+  <line x1="1720" y1="248" x2="1720" y2="315" class="wire"/>
+  <text x="1730" y="286" class="ce-label">CE_S0</text>
+
+  <!-- Distribution Bus -->
+  <line x1="101" y1="315" x2="851" y2="315" class="wire"/>
+
+  <line x1="101" y1="315" x2="101" y2="370" class="thin-wire"/>
+  <polygon points="98,365 104,365 101,370" fill="#2980b9"/>
+  <rect x="80" y="370" width="42" height="92" class="dff-box"/>
+  <text x="101" y="389" class="dff-num">35</text>
+  <text x="101" y="407" class="dff-ce">CE</text>
+  <line x1="84" y1="414" x2="118" y2="414" class="divider"/>
+  <text x="101" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="96" y1="462" x2="101" y2="455" class="thin-wire"/>
+  <line x1="106" y1="462" x2="101" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="101" y1="462" x2="101" y2="505" class="thin-wire"/>
+
+  <line x1="151" y1="315" x2="151" y2="370" class="thin-wire"/>
+  <polygon points="148,365 154,365 151,370" fill="#2980b9"/>
+  <rect x="130" y="370" width="42" height="92" class="dff-box"/>
+  <text x="151" y="389" class="dff-num">34</text>
+  <text x="151" y="407" class="dff-ce">CE</text>
+  <line x1="134" y1="414" x2="168" y2="414" class="divider"/>
+  <text x="151" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="146" y1="462" x2="151" y2="455" class="thin-wire"/>
+  <line x1="156" y1="462" x2="151" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="151" y1="462" x2="151" y2="505" class="thin-wire"/>
+
+  <line x1="201" y1="315" x2="201" y2="370" class="thin-wire"/>
+  <polygon points="198,365 204,365 201,370" fill="#2980b9"/>
+  <rect x="180" y="370" width="42" height="92" class="dff-box"/>
+  <text x="201" y="389" class="dff-num">33</text>
+  <text x="201" y="407" class="dff-ce">CE</text>
+  <line x1="184" y1="414" x2="218" y2="414" class="divider"/>
+  <text x="201" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="196" y1="462" x2="201" y2="455" class="thin-wire"/>
+  <line x1="206" y1="462" x2="201" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="201" y1="462" x2="201" y2="505" class="thin-wire"/>
+
+  <line x1="251" y1="315" x2="251" y2="370" class="thin-wire"/>
+  <polygon points="248,365 254,365 251,370" fill="#2980b9"/>
+  <rect x="230" y="370" width="42" height="92" class="dff-box"/>
+  <text x="251" y="389" class="dff-num">32</text>
+  <text x="251" y="407" class="dff-ce">CE</text>
+  <line x1="234" y1="414" x2="268" y2="414" class="divider"/>
+  <text x="251" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="246" y1="462" x2="251" y2="455" class="thin-wire"/>
+  <line x1="256" y1="462" x2="251" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="251" y1="462" x2="251" y2="505" class="thin-wire"/>
+
+  <line x1="301" y1="315" x2="301" y2="370" class="thin-wire"/>
+  <polygon points="298,365 304,365 301,370" fill="#2980b9"/>
+  <rect x="280" y="370" width="42" height="92" class="dff-box"/>
+  <text x="301" y="389" class="dff-num">31</text>
+  <text x="301" y="407" class="dff-ce">CE</text>
+  <line x1="284" y1="414" x2="318" y2="414" class="divider"/>
+  <text x="301" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="296" y1="462" x2="301" y2="455" class="thin-wire"/>
+  <line x1="306" y1="462" x2="301" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="301" y1="462" x2="301" y2="505" class="thin-wire"/>
+
+  <line x1="351" y1="315" x2="351" y2="370" class="thin-wire"/>
+  <polygon points="348,365 354,365 351,370" fill="#2980b9"/>
+  <rect x="330" y="370" width="42" height="92" class="dff-box"/>
+  <text x="351" y="389" class="dff-num">30</text>
+  <text x="351" y="407" class="dff-ce">CE</text>
+  <line x1="334" y1="414" x2="368" y2="414" class="divider"/>
+  <text x="351" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="346" y1="462" x2="351" y2="455" class="thin-wire"/>
+  <line x1="356" y1="462" x2="351" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="351" y1="462" x2="351" y2="505" class="thin-wire"/>
+
+  <line x1="401" y1="315" x2="401" y2="370" class="thin-wire"/>
+  <polygon points="398,365 404,365 401,370" fill="#2980b9"/>
+  <rect x="380" y="370" width="42" height="92" class="dff-box"/>
+  <text x="401" y="389" class="dff-num">29</text>
+  <text x="401" y="407" class="dff-ce">CE</text>
+  <line x1="384" y1="414" x2="418" y2="414" class="divider"/>
+  <text x="401" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="396" y1="462" x2="401" y2="455" class="thin-wire"/>
+  <line x1="406" y1="462" x2="401" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="401" y1="462" x2="401" y2="505" class="thin-wire"/>
+
+  <line x1="451" y1="315" x2="451" y2="370" class="thin-wire"/>
+  <polygon points="448,365 454,365 451,370" fill="#2980b9"/>
+  <rect x="430" y="370" width="42" height="92" class="dff-box"/>
+  <text x="451" y="389" class="dff-num">28</text>
+  <text x="451" y="407" class="dff-ce">CE</text>
+  <line x1="434" y1="414" x2="468" y2="414" class="divider"/>
+  <text x="451" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="446" y1="462" x2="451" y2="455" class="thin-wire"/>
+  <line x1="456" y1="462" x2="451" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="451" y1="462" x2="451" y2="505" class="thin-wire"/>
+
+  <line x1="501" y1="315" x2="501" y2="370" class="thin-wire"/>
+  <polygon points="498,365 504,365 501,370" fill="#2980b9"/>
+  <rect x="480" y="370" width="42" height="92" class="dff-box"/>
+  <text x="501" y="389" class="dff-num">27</text>
+  <text x="501" y="407" class="dff-ce">CE</text>
+  <line x1="484" y1="414" x2="518" y2="414" class="divider"/>
+  <text x="501" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="496" y1="462" x2="501" y2="455" class="thin-wire"/>
+  <line x1="506" y1="462" x2="501" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="501" y1="462" x2="501" y2="505" class="thin-wire"/>
+
+  <line x1="551" y1="315" x2="551" y2="370" class="thin-wire"/>
+  <polygon points="548,365 554,365 551,370" fill="#2980b9"/>
+  <rect x="530" y="370" width="42" height="92" class="dff-box"/>
+  <text x="551" y="389" class="dff-num">26</text>
+  <text x="551" y="407" class="dff-ce">CE</text>
+  <line x1="534" y1="414" x2="568" y2="414" class="divider"/>
+  <text x="551" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="546" y1="462" x2="551" y2="455" class="thin-wire"/>
+  <line x1="556" y1="462" x2="551" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="551" y1="462" x2="551" y2="505" class="thin-wire"/>
+
+  <line x1="601" y1="315" x2="601" y2="370" class="thin-wire"/>
+  <polygon points="598,365 604,365 601,370" fill="#2980b9"/>
+  <rect x="580" y="370" width="42" height="92" class="dff-box"/>
+  <text x="601" y="389" class="dff-num">25</text>
+  <text x="601" y="407" class="dff-ce">CE</text>
+  <line x1="584" y1="414" x2="618" y2="414" class="divider"/>
+  <text x="601" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="596" y1="462" x2="601" y2="455" class="thin-wire"/>
+  <line x1="606" y1="462" x2="601" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="601" y1="462" x2="601" y2="505" class="thin-wire"/>
+
+  <line x1="651" y1="315" x2="651" y2="370" class="thin-wire"/>
+  <polygon points="648,365 654,365 651,370" fill="#2980b9"/>
+  <rect x="630" y="370" width="42" height="92" class="dff-box"/>
+  <text x="651" y="389" class="dff-num">24</text>
+  <text x="651" y="407" class="dff-ce">CE</text>
+  <line x1="634" y1="414" x2="668" y2="414" class="divider"/>
+  <text x="651" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="646" y1="462" x2="651" y2="455" class="thin-wire"/>
+  <line x1="656" y1="462" x2="651" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="651" y1="462" x2="651" y2="505" class="thin-wire"/>
+
+  <line x1="701" y1="315" x2="701" y2="370" class="thin-wire"/>
+  <polygon points="698,365 704,365 701,370" fill="#2980b9"/>
+  <rect x="680" y="370" width="42" height="92" class="dff-box"/>
+  <text x="701" y="389" class="dff-num">23</text>
+  <text x="701" y="407" class="dff-ce">CE</text>
+  <line x1="684" y1="414" x2="718" y2="414" class="divider"/>
+  <text x="701" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="696" y1="462" x2="701" y2="455" class="thin-wire"/>
+  <line x1="706" y1="462" x2="701" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="701" y1="462" x2="701" y2="505" class="thin-wire"/>
+
+  <line x1="751" y1="315" x2="751" y2="370" class="thin-wire"/>
+  <polygon points="748,365 754,365 751,370" fill="#2980b9"/>
+  <rect x="730" y="370" width="42" height="92" class="dff-box"/>
+  <text x="751" y="389" class="dff-num">22</text>
+  <text x="751" y="407" class="dff-ce">CE</text>
+  <line x1="734" y1="414" x2="768" y2="414" class="divider"/>
+  <text x="751" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="746" y1="462" x2="751" y2="455" class="thin-wire"/>
+  <line x1="756" y1="462" x2="751" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="751" y1="462" x2="751" y2="505" class="thin-wire"/>
+
+  <line x1="801" y1="315" x2="801" y2="370" class="thin-wire"/>
+  <polygon points="798,365 804,365 801,370" fill="#2980b9"/>
+  <rect x="780" y="370" width="42" height="92" class="dff-box"/>
+  <text x="801" y="389" class="dff-num">21</text>
+  <text x="801" y="407" class="dff-ce">CE</text>
+  <line x1="784" y1="414" x2="818" y2="414" class="divider"/>
+  <text x="801" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="796" y1="462" x2="801" y2="455" class="thin-wire"/>
+  <line x1="806" y1="462" x2="801" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="801" y1="462" x2="801" y2="505" class="thin-wire"/>
+
+  <line x1="851" y1="315" x2="851" y2="370" class="thin-wire"/>
+  <polygon points="848,365 854,365 851,370" fill="#2980b9"/>
+  <rect x="830" y="370" width="42" height="92" class="dff-box"/>
+  <text x="851" y="389" class="dff-num">20</text>
+  <text x="851" y="407" class="dff-ce">CE</text>
+  <line x1="834" y1="414" x2="868" y2="414" class="divider"/>
+  <text x="851" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="846" y1="462" x2="851" y2="455" class="thin-wire"/>
+  <line x1="856" y1="462" x2="851" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="851" y1="462" x2="851" y2="505" class="thin-wire"/>
+
+  <!-- Distribution Bus -->
+  <line x1="973" y1="315" x2="1323" y2="315" class="wire"/>
+
+  <line x1="973" y1="315" x2="973" y2="370" class="thin-wire"/>
+  <polygon points="970,365 976,365 973,370" fill="#2980b9"/>
+  <rect x="952" y="370" width="42" height="92" class="dff-box"/>
+  <text x="973" y="389" class="dff-num">19</text>
+  <text x="973" y="407" class="dff-ce">CE</text>
+  <line x1="956" y1="414" x2="990" y2="414" class="divider"/>
+  <text x="973" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="968" y1="462" x2="973" y2="455" class="thin-wire"/>
+  <line x1="978" y1="462" x2="973" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="973" y1="462" x2="973" y2="505" class="thin-wire"/>
+
+  <line x1="1023" y1="315" x2="1023" y2="370" class="thin-wire"/>
+  <polygon points="1020,365 1026,365 1023,370" fill="#2980b9"/>
+  <rect x="1002" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1023" y="389" class="dff-num">18</text>
+  <text x="1023" y="407" class="dff-ce">CE</text>
+  <line x1="1006" y1="414" x2="1040" y2="414" class="divider"/>
+  <text x="1023" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1018" y1="462" x2="1023" y2="455" class="thin-wire"/>
+  <line x1="1028" y1="462" x2="1023" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1023" y1="462" x2="1023" y2="505" class="thin-wire"/>
+
+  <line x1="1073" y1="315" x2="1073" y2="370" class="thin-wire"/>
+  <polygon points="1070,365 1076,365 1073,370" fill="#2980b9"/>
+  <rect x="1052" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1073" y="389" class="dff-num">17</text>
+  <text x="1073" y="407" class="dff-ce">CE</text>
+  <line x1="1056" y1="414" x2="1090" y2="414" class="divider"/>
+  <text x="1073" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1068" y1="462" x2="1073" y2="455" class="thin-wire"/>
+  <line x1="1078" y1="462" x2="1073" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1073" y1="462" x2="1073" y2="505" class="thin-wire"/>
+
+  <line x1="1123" y1="315" x2="1123" y2="370" class="thin-wire"/>
+  <polygon points="1120,365 1126,365 1123,370" fill="#2980b9"/>
+  <rect x="1102" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1123" y="389" class="dff-num">16</text>
+  <text x="1123" y="407" class="dff-ce">CE</text>
+  <line x1="1106" y1="414" x2="1140" y2="414" class="divider"/>
+  <text x="1123" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1118" y1="462" x2="1123" y2="455" class="thin-wire"/>
+  <line x1="1128" y1="462" x2="1123" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1123" y1="462" x2="1123" y2="505" class="thin-wire"/>
+
+  <line x1="1173" y1="315" x2="1173" y2="370" class="thin-wire"/>
+  <polygon points="1170,365 1176,365 1173,370" fill="#2980b9"/>
+  <rect x="1152" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1173" y="389" class="dff-num">15</text>
+  <text x="1173" y="407" class="dff-ce">CE</text>
+  <line x1="1156" y1="414" x2="1190" y2="414" class="divider"/>
+  <text x="1173" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1168" y1="462" x2="1173" y2="455" class="thin-wire"/>
+  <line x1="1178" y1="462" x2="1173" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1173" y1="462" x2="1173" y2="505" class="thin-wire"/>
+
+  <line x1="1223" y1="315" x2="1223" y2="370" class="thin-wire"/>
+  <polygon points="1220,365 1226,365 1223,370" fill="#2980b9"/>
+  <rect x="1202" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1223" y="389" class="dff-num">14</text>
+  <text x="1223" y="407" class="dff-ce">CE</text>
+  <line x1="1206" y1="414" x2="1240" y2="414" class="divider"/>
+  <text x="1223" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1218" y1="462" x2="1223" y2="455" class="thin-wire"/>
+  <line x1="1228" y1="462" x2="1223" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1223" y1="462" x2="1223" y2="505" class="thin-wire"/>
+
+  <line x1="1273" y1="315" x2="1273" y2="370" class="thin-wire"/>
+  <polygon points="1270,365 1276,365 1273,370" fill="#2980b9"/>
+  <rect x="1252" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1273" y="389" class="dff-num">13</text>
+  <text x="1273" y="407" class="dff-ce">CE</text>
+  <line x1="1256" y1="414" x2="1290" y2="414" class="divider"/>
+  <text x="1273" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1268" y1="462" x2="1273" y2="455" class="thin-wire"/>
+  <line x1="1278" y1="462" x2="1273" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1273" y1="462" x2="1273" y2="505" class="thin-wire"/>
+
+  <line x1="1323" y1="315" x2="1323" y2="370" class="thin-wire"/>
+  <polygon points="1320,365 1326,365 1323,370" fill="#2980b9"/>
+  <rect x="1302" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1323" y="389" class="dff-num">12</text>
+  <text x="1323" y="407" class="dff-ce">CE</text>
+  <line x1="1306" y1="414" x2="1340" y2="414" class="divider"/>
+  <text x="1323" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1318" y1="462" x2="1323" y2="455" class="thin-wire"/>
+  <line x1="1328" y1="462" x2="1323" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1323" y1="462" x2="1323" y2="505" class="thin-wire"/>
+
+  <!-- Distribution Bus -->
+  <line x1="1445" y1="315" x2="1995" y2="315" class="wire"/>
+
+  <line x1="1445" y1="315" x2="1445" y2="370" class="thin-wire"/>
+  <polygon points="1442,365 1448,365 1445,370" fill="#2980b9"/>
+  <rect x="1424" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1445" y="389" class="dff-num">11</text>
+  <text x="1445" y="407" class="dff-ce">CE</text>
+  <line x1="1428" y1="414" x2="1462" y2="414" class="divider"/>
+  <text x="1445" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1440" y1="462" x2="1445" y2="455" class="thin-wire"/>
+  <line x1="1450" y1="462" x2="1445" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1445" y1="462" x2="1445" y2="505" class="thin-wire"/>
+
+  <line x1="1495" y1="315" x2="1495" y2="370" class="thin-wire"/>
+  <polygon points="1492,365 1498,365 1495,370" fill="#2980b9"/>
+  <rect x="1474" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1495" y="389" class="dff-num">10</text>
+  <text x="1495" y="407" class="dff-ce">CE</text>
+  <line x1="1478" y1="414" x2="1512" y2="414" class="divider"/>
+  <text x="1495" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1490" y1="462" x2="1495" y2="455" class="thin-wire"/>
+  <line x1="1500" y1="462" x2="1495" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1495" y1="462" x2="1495" y2="505" class="thin-wire"/>
+
+  <line x1="1545" y1="315" x2="1545" y2="370" class="thin-wire"/>
+  <polygon points="1542,365 1548,365 1545,370" fill="#2980b9"/>
+  <rect x="1524" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1545" y="389" class="dff-num">9</text>
+  <text x="1545" y="407" class="dff-ce">CE</text>
+  <line x1="1528" y1="414" x2="1562" y2="414" class="divider"/>
+  <text x="1545" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1540" y1="462" x2="1545" y2="455" class="thin-wire"/>
+  <line x1="1550" y1="462" x2="1545" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1545" y1="462" x2="1545" y2="505" class="thin-wire"/>
+
+  <line x1="1595" y1="315" x2="1595" y2="370" class="thin-wire"/>
+  <polygon points="1592,365 1598,365 1595,370" fill="#2980b9"/>
+  <rect x="1574" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1595" y="389" class="dff-num">8</text>
+  <text x="1595" y="407" class="dff-ce">CE</text>
+  <line x1="1578" y1="414" x2="1612" y2="414" class="divider"/>
+  <text x="1595" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1590" y1="462" x2="1595" y2="455" class="thin-wire"/>
+  <line x1="1600" y1="462" x2="1595" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1595" y1="462" x2="1595" y2="505" class="thin-wire"/>
+
+  <line x1="1645" y1="315" x2="1645" y2="370" class="thin-wire"/>
+  <polygon points="1642,365 1648,365 1645,370" fill="#2980b9"/>
+  <rect x="1624" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1645" y="389" class="dff-num">7</text>
+  <text x="1645" y="407" class="dff-ce">CE</text>
+  <line x1="1628" y1="414" x2="1662" y2="414" class="divider"/>
+  <text x="1645" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1640" y1="462" x2="1645" y2="455" class="thin-wire"/>
+  <line x1="1650" y1="462" x2="1645" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1645" y1="462" x2="1645" y2="505" class="thin-wire"/>
+
+  <line x1="1695" y1="315" x2="1695" y2="370" class="thin-wire"/>
+  <polygon points="1692,365 1698,365 1695,370" fill="#2980b9"/>
+  <rect x="1674" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1695" y="389" class="dff-num">6</text>
+  <text x="1695" y="407" class="dff-ce">CE</text>
+  <line x1="1678" y1="414" x2="1712" y2="414" class="divider"/>
+  <text x="1695" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1690" y1="462" x2="1695" y2="455" class="thin-wire"/>
+  <line x1="1700" y1="462" x2="1695" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1695" y1="462" x2="1695" y2="505" class="thin-wire"/>
+
+  <line x1="1745" y1="315" x2="1745" y2="370" class="thin-wire"/>
+  <polygon points="1742,365 1748,365 1745,370" fill="#2980b9"/>
+  <rect x="1724" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1745" y="389" class="dff-num">5</text>
+  <text x="1745" y="407" class="dff-ce">CE</text>
+  <line x1="1728" y1="414" x2="1762" y2="414" class="divider"/>
+  <text x="1745" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1740" y1="462" x2="1745" y2="455" class="thin-wire"/>
+  <line x1="1750" y1="462" x2="1745" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1745" y1="462" x2="1745" y2="505" class="thin-wire"/>
+
+  <line x1="1795" y1="315" x2="1795" y2="370" class="thin-wire"/>
+  <polygon points="1792,365 1798,365 1795,370" fill="#2980b9"/>
+  <rect x="1774" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1795" y="389" class="dff-num">4</text>
+  <text x="1795" y="407" class="dff-ce">CE</text>
+  <line x1="1778" y1="414" x2="1812" y2="414" class="divider"/>
+  <text x="1795" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1790" y1="462" x2="1795" y2="455" class="thin-wire"/>
+  <line x1="1800" y1="462" x2="1795" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1795" y1="462" x2="1795" y2="505" class="thin-wire"/>
+
+  <line x1="1845" y1="315" x2="1845" y2="370" class="thin-wire"/>
+  <polygon points="1842,365 1848,365 1845,370" fill="#2980b9"/>
+  <rect x="1824" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1845" y="389" class="dff-num">3</text>
+  <text x="1845" y="407" class="dff-ce">CE</text>
+  <line x1="1828" y1="414" x2="1862" y2="414" class="divider"/>
+  <text x="1845" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1840" y1="462" x2="1845" y2="455" class="thin-wire"/>
+  <line x1="1850" y1="462" x2="1845" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1845" y1="462" x2="1845" y2="505" class="thin-wire"/>
+
+  <line x1="1895" y1="315" x2="1895" y2="370" class="thin-wire"/>
+  <polygon points="1892,365 1898,365 1895,370" fill="#2980b9"/>
+  <rect x="1874" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1895" y="389" class="dff-num">2</text>
+  <text x="1895" y="407" class="dff-ce">CE</text>
+  <line x1="1878" y1="414" x2="1912" y2="414" class="divider"/>
+  <text x="1895" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1890" y1="462" x2="1895" y2="455" class="thin-wire"/>
+  <line x1="1900" y1="462" x2="1895" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1895" y1="462" x2="1895" y2="505" class="thin-wire"/>
+
+  <line x1="1945" y1="315" x2="1945" y2="370" class="thin-wire"/>
+  <polygon points="1942,365 1948,365 1945,370" fill="#2980b9"/>
+  <rect x="1924" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1945" y="389" class="dff-num">1</text>
+  <text x="1945" y="407" class="dff-ce">CE</text>
+  <line x1="1928" y1="414" x2="1962" y2="414" class="divider"/>
+  <text x="1945" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1940" y1="462" x2="1945" y2="455" class="thin-wire"/>
+  <line x1="1950" y1="462" x2="1945" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1945" y1="462" x2="1945" y2="505" class="thin-wire"/>
+
+  <line x1="1995" y1="315" x2="1995" y2="370" class="thin-wire"/>
+  <polygon points="1992,365 1998,365 1995,370" fill="#2980b9"/>
+  <rect x="1974" y="370" width="42" height="92" class="dff-box"/>
+  <text x="1995" y="389" class="dff-num">0</text>
+  <text x="1995" y="407" class="dff-ce">CE</text>
+  <line x1="1978" y1="414" x2="2012" y2="414" class="divider"/>
+  <text x="1995" y="434" class="dff-text">DFF</text>
+  <!-- Clock triangle -->
+  <line x1="1990" y1="462" x2="1995" y2="455" class="thin-wire"/>
+  <line x1="2000" y1="462" x2="1995" y2="455" class="thin-wire"/>
+  <!-- CLK connect wire -->
+  <line x1="1995" y1="462" x2="1995" y2="505" class="thin-wire"/>
+
+  <!-- Bottom CLK Rail -->
+  <text x="40" y="511" class="rail-label">CLK</text>
+  <line x1="85" y1="505" x2="2160" y2="505" class="wire"/>
+
+  <!-- Footers -->
+  <text x="476" y="555" class="seg-title">S2 — UPPER SEGMENT (MSBs)</text>
+  <text x="476" y="579" class="seg-sub">16 register bits: [35:20]</text>
+  <text x="476" y="601" class="seg-mode">Enabled in INT16; held in INT4 / INT8</text>
+  <text x="1148" y="555" class="seg-title">S1 — MIDDLE SEGMENT</text>
+  <text x="1148" y="579" class="seg-sub">8 register bits: [19:12]</text>
+  <text x="1148" y="601" class="seg-mode">Enabled in INT8 / INT16; held in INT4</text>
+  <text x="1720" y="555" class="seg-title">S0 — LOWER SEGMENT (LSBs)</text>
+  <text x="1720" y="579" class="seg-sub">12 register bits: [11:0]</text>
+  <text x="1720" y="601" class="seg-mode">Precision-active in all modes</text>
+  <text x="1120" y="655" class="footer-text">Controller outputs are CE_S2 / CE_S1 / CE_S0 (from ICG logic); the bottom CLK net directly drives all DFF clock pins.</text>
+</svg>

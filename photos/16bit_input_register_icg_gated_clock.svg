@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 750" width="1800" height="750">
+  <style>
+    .title { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: bold; fill: #1b263b; }
+    .subtitle { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; fill: #5d6d7e; }
+    .rail-label { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: bold; fill: #2c3e50; }
+    .icg-title { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #154360; text-anchor: middle; }
+    .icg-sub { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; fill: #5d6d7e; text-anchor: middle; }
+    .icg-mode { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2980b9; text-anchor: middle; }
+    .gclk-label { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #154360; }
+    .gclk-sub { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; fill: #5d6d7e; }
+    .dff-num { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1b263b; text-anchor: middle; }
+    .dff-clk { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #154360; text-anchor: middle; }
+    .dff-text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; fill: #5d6d7e; text-anchor: middle; }
+    .seg-title { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; font-weight: bold; fill: #1b263b; text-anchor: middle; }
+    .seg-sub { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; fill: #5d6d7e; text-anchor: middle; }
+    .seg-mode { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; fill: #7f8c8d; text-anchor: middle; }
+    .banner-text1 { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #1b263b; text-anchor: middle; }
+    .banner-text2 { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; fill: #2980b9; text-anchor: middle; }
+    .wire { stroke: #2980b9; stroke-width: 2; fill: none; }
+    .wire-gclk { stroke: #2980b9; stroke-width: 2.5; fill: none; }
+    .thin-wire { stroke: #2980b9; stroke-width: 1.5; fill: none; }
+    .icg-box { fill: #ebf5fb; stroke: #2980b9; stroke-width: 2; rx: 10; ry: 10; }
+    .dff-box { fill: #f8f9fa; stroke: #2980b9; stroke-width: 1.2; rx: 4; ry: 4; }
+    .divider { stroke: #d6dbdf; stroke-width: 1; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Header -->
+  <text x="60" y="55" class="title">16-bit Input Register — Segmented Integrated Clock Gating (ICG)</text>
+  <text x="60" y="85" class="subtitle">True Clock Gating: ICG outputs Gated Clocks (GCLK); unused segments have clock physically frozen at 0.</text>
+
+  <!-- Top Master CLK Rail -->
+  <text x="40" y="142" class="rail-label">CLK</text>
+  <line x1="85" y1="135" x2="1720" y2="135" class="wire"/>
+  <line x1="510" y1="135" x2="510" y2="165" class="wire"/>
+  <polygon points="506,160 514,160 510,166" fill="#2980b9"/>
+  <line x1="1032" y1="135" x2="1032" y2="165" class="wire"/>
+  <polygon points="1028,160 1036,160 1032,166" fill="#2980b9"/>
+  <line x1="1422" y1="135" x2="1422" y2="165" class="wire"/>
+  <polygon points="1418,160 1426,160 1422,166" fill="#2980b9"/>
+
+  <!-- ICG Block GCLK_S2 -->
+  <rect x="387" y="166" width="246" height="86" class="icg-box"/>
+  <text x="510" y="190" class="icg-title">INTEGRATED CLOCK GATING</text>
+  <text x="510" y="210" class="icg-sub">ICG CELL (Latch + AND)</text>
+  <text x="510" y="234" class="icg-mode">EN: S2 · mode</text>
+  <line x1="510" y1="252" x2="510" y2="320" class="wire-gclk"/>
+  <text x="520" y="286" class="gclk-label">GCLK_S2</text>
+  <text x="520" y="302" class="gclk-sub">(Gated Clock)</text>
+
+  <!-- ICG Block GCLK_S1 -->
+  <rect x="909" y="166" width="246" height="86" class="icg-box"/>
+  <text x="1032" y="190" class="icg-title">INTEGRATED CLOCK GATING</text>
+  <text x="1032" y="210" class="icg-sub">ICG CELL (Latch + AND)</text>
+  <text x="1032" y="234" class="icg-mode">EN: S1 · mode</text>
+  <line x1="1032" y1="252" x2="1032" y2="320" class="wire-gclk"/>
+  <text x="1042" y="286" class="gclk-label">GCLK_S1</text>
+  <text x="1042" y="302" class="gclk-sub">(Gated Clock)</text>
+
+  <!-- ICG Block GCLK_S0 -->
+  <rect x="1299" y="166" width="246" height="86" class="icg-box"/>
+  <text x="1422" y="190" class="icg-title">INTEGRATED CLOCK GATING</text>
+  <text x="1422" y="210" class="icg-sub">ICG CELL (Latch + AND)</text>
+  <text x="1422" y="234" class="icg-mode">EN: S0 · mode</text>
+  <line x1="1422" y1="252" x2="1422" y2="320" class="wire-gclk"/>
+  <text x="1432" y="286" class="gclk-label">GCLK_S0</text>
+  <text x="1432" y="302" class="gclk-sub">(Gated Clock)</text>
+
+  <!-- GCLK Distribution Bus -->
+  <line x1="279" y1="320" x2="741" y2="320" class="wire-gclk"/>
+
+  <line x1="279" y1="320" x2="279" y2="380" class="thin-wire"/>
+  <rect x="253" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="273" y1="380" x2="279" y2="388" class="thin-wire"/>
+  <line x1="285" y1="380" x2="279" y2="388" class="thin-wire"/>
+  <text x="279" y="403" class="dff-clk">CLK</text>
+  <line x1="258" y1="412" x2="300" y2="412" class="divider"/>
+  <text x="279" y="436" class="dff-num">15</text>
+  <text x="279" y="458" class="dff-text">DFF</text>
+
+  <line x1="345" y1="320" x2="345" y2="380" class="thin-wire"/>
+  <rect x="319" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="339" y1="380" x2="345" y2="388" class="thin-wire"/>
+  <line x1="351" y1="380" x2="345" y2="388" class="thin-wire"/>
+  <text x="345" y="403" class="dff-clk">CLK</text>
+  <line x1="324" y1="412" x2="366" y2="412" class="divider"/>
+  <text x="345" y="436" class="dff-num">14</text>
+  <text x="345" y="458" class="dff-text">DFF</text>
+
+  <line x1="411" y1="320" x2="411" y2="380" class="thin-wire"/>
+  <rect x="385" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="405" y1="380" x2="411" y2="388" class="thin-wire"/>
+  <line x1="417" y1="380" x2="411" y2="388" class="thin-wire"/>
+  <text x="411" y="403" class="dff-clk">CLK</text>
+  <line x1="390" y1="412" x2="432" y2="412" class="divider"/>
+  <text x="411" y="436" class="dff-num">13</text>
+  <text x="411" y="458" class="dff-text">DFF</text>
+
+  <line x1="477" y1="320" x2="477" y2="380" class="thin-wire"/>
+  <rect x="451" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="471" y1="380" x2="477" y2="388" class="thin-wire"/>
+  <line x1="483" y1="380" x2="477" y2="388" class="thin-wire"/>
+  <text x="477" y="403" class="dff-clk">CLK</text>
+  <line x1="456" y1="412" x2="498" y2="412" class="divider"/>
+  <text x="477" y="436" class="dff-num">12</text>
+  <text x="477" y="458" class="dff-text">DFF</text>
+
+  <line x1="543" y1="320" x2="543" y2="380" class="thin-wire"/>
+  <rect x="517" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="537" y1="380" x2="543" y2="388" class="thin-wire"/>
+  <line x1="549" y1="380" x2="543" y2="388" class="thin-wire"/>
+  <text x="543" y="403" class="dff-clk">CLK</text>
+  <line x1="522" y1="412" x2="564" y2="412" class="divider"/>
+  <text x="543" y="436" class="dff-num">11</text>
+  <text x="543" y="458" class="dff-text">DFF</text>
+
+  <line x1="609" y1="320" x2="609" y2="380" class="thin-wire"/>
+  <rect x="583" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="603" y1="380" x2="609" y2="388" class="thin-wire"/>
+  <line x1="615" y1="380" x2="609" y2="388" class="thin-wire"/>
+  <text x="609" y="403" class="dff-clk">CLK</text>
+  <line x1="588" y1="412" x2="630" y2="412" class="divider"/>
+  <text x="609" y="436" class="dff-num">10</text>
+  <text x="609" y="458" class="dff-text">DFF</text>
+
+  <line x1="675" y1="320" x2="675" y2="380" class="thin-wire"/>
+  <rect x="649" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="669" y1="380" x2="675" y2="388" class="thin-wire"/>
+  <line x1="681" y1="380" x2="675" y2="388" class="thin-wire"/>
+  <text x="675" y="403" class="dff-clk">CLK</text>
+  <line x1="654" y1="412" x2="696" y2="412" class="divider"/>
+  <text x="675" y="436" class="dff-num">9</text>
+  <text x="675" y="458" class="dff-text">DFF</text>
+
+  <line x1="741" y1="320" x2="741" y2="380" class="thin-wire"/>
+  <rect x="715" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="735" y1="380" x2="741" y2="388" class="thin-wire"/>
+  <line x1="747" y1="380" x2="741" y2="388" class="thin-wire"/>
+  <text x="741" y="403" class="dff-clk">CLK</text>
+  <line x1="720" y1="412" x2="762" y2="412" class="divider"/>
+  <text x="741" y="436" class="dff-num">8</text>
+  <text x="741" y="458" class="dff-text">DFF</text>
+
+  <!-- GCLK Distribution Bus -->
+  <line x1="933" y1="320" x2="1131" y2="320" class="wire-gclk"/>
+
+  <line x1="933" y1="320" x2="933" y2="380" class="thin-wire"/>
+  <rect x="907" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="927" y1="380" x2="933" y2="388" class="thin-wire"/>
+  <line x1="939" y1="380" x2="933" y2="388" class="thin-wire"/>
+  <text x="933" y="403" class="dff-clk">CLK</text>
+  <line x1="912" y1="412" x2="954" y2="412" class="divider"/>
+  <text x="933" y="436" class="dff-num">7</text>
+  <text x="933" y="458" class="dff-text">DFF</text>
+
+  <line x1="999" y1="320" x2="999" y2="380" class="thin-wire"/>
+  <rect x="973" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="993" y1="380" x2="999" y2="388" class="thin-wire"/>
+  <line x1="1005" y1="380" x2="999" y2="388" class="thin-wire"/>
+  <text x="999" y="403" class="dff-clk">CLK</text>
+  <line x1="978" y1="412" x2="1020" y2="412" class="divider"/>
+  <text x="999" y="436" class="dff-num">6</text>
+  <text x="999" y="458" class="dff-text">DFF</text>
+
+  <line x1="1065" y1="320" x2="1065" y2="380" class="thin-wire"/>
+  <rect x="1039" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="1059" y1="380" x2="1065" y2="388" class="thin-wire"/>
+  <line x1="1071" y1="380" x2="1065" y2="388" class="thin-wire"/>
+  <text x="1065" y="403" class="dff-clk">CLK</text>
+  <line x1="1044" y1="412" x2="1086" y2="412" class="divider"/>
+  <text x="1065" y="436" class="dff-num">5</text>
+  <text x="1065" y="458" class="dff-text">DFF</text>
+
+  <line x1="1131" y1="320" x2="1131" y2="380" class="thin-wire"/>
+  <rect x="1105" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="1125" y1="380" x2="1131" y2="388" class="thin-wire"/>
+  <line x1="1137" y1="380" x2="1131" y2="388" class="thin-wire"/>
+  <text x="1131" y="403" class="dff-clk">CLK</text>
+  <line x1="1110" y1="412" x2="1152" y2="412" class="divider"/>
+  <text x="1131" y="436" class="dff-num">4</text>
+  <text x="1131" y="458" class="dff-text">DFF</text>
+
+  <!-- GCLK Distribution Bus -->
+  <line x1="1323" y1="320" x2="1521" y2="320" class="wire-gclk"/>
+
+  <line x1="1323" y1="320" x2="1323" y2="380" class="thin-wire"/>
+  <rect x="1297" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="1317" y1="380" x2="1323" y2="388" class="thin-wire"/>
+  <line x1="1329" y1="380" x2="1323" y2="388" class="thin-wire"/>
+  <text x="1323" y="403" class="dff-clk">CLK</text>
+  <line x1="1302" y1="412" x2="1344" y2="412" class="divider"/>
+  <text x="1323" y="436" class="dff-num">3</text>
+  <text x="1323" y="458" class="dff-text">DFF</text>
+
+  <line x1="1389" y1="320" x2="1389" y2="380" class="thin-wire"/>
+  <rect x="1363" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="1383" y1="380" x2="1389" y2="388" class="thin-wire"/>
+  <line x1="1395" y1="380" x2="1389" y2="388" class="thin-wire"/>
+  <text x="1389" y="403" class="dff-clk">CLK</text>
+  <line x1="1368" y1="412" x2="1410" y2="412" class="divider"/>
+  <text x="1389" y="436" class="dff-num">2</text>
+  <text x="1389" y="458" class="dff-text">DFF</text>
+
+  <line x1="1455" y1="320" x2="1455" y2="380" class="thin-wire"/>
+  <rect x="1429" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="1449" y1="380" x2="1455" y2="388" class="thin-wire"/>
+  <line x1="1461" y1="380" x2="1455" y2="388" class="thin-wire"/>
+  <text x="1455" y="403" class="dff-clk">CLK</text>
+  <line x1="1434" y1="412" x2="1476" y2="412" class="divider"/>
+  <text x="1455" y="436" class="dff-num">1</text>
+  <text x="1455" y="458" class="dff-text">DFF</text>
+
+  <line x1="1521" y1="320" x2="1521" y2="380" class="thin-wire"/>
+  <rect x="1495" y="380" width="52" height="96" class="dff-box"/>
+  <!-- Clock pin triangle at top -->
+  <line x1="1515" y1="380" x2="1521" y2="388" class="thin-wire"/>
+  <line x1="1527" y1="380" x2="1521" y2="388" class="thin-wire"/>
+  <text x="1521" y="403" class="dff-clk">CLK</text>
+  <line x1="1500" y1="412" x2="1542" y2="412" class="divider"/>
+  <text x="1521" y="436" class="dff-num">0</text>
+  <text x="1521" y="458" class="dff-text">DFF</text>
+  <text x="510" y="535" class="seg-title">S2 — UPPER SEGMENT (MSBs)</text>
+  <text x="510" y="559" class="seg-sub">8 register bits: [15:8]</text>
+  <text x="510" y="581" class="seg-mode">Clock: GCLK_S2 (Frozen at 0 in INT4 / INT8)</text>
+  <text x="1032" y="535" class="seg-title">S1 — MIDDLE SEGMENT</text>
+  <text x="1032" y="559" class="seg-sub">4 register bits: [7:4]</text>
+  <text x="1032" y="581" class="seg-mode">Clock: GCLK_S1 (Frozen at 0 in INT4)</text>
+  <text x="1422" y="535" class="seg-title">S0 — LOWER SEGMENT (LSBs)</text>
+  <text x="1422" y="559" class="seg-sub">4 register bits: [3:0]</text>
+  <text x="1422" y="581" class="seg-mode">Clock: GCLK_S0 (Active in all modes)</text>
+
+  <!-- Bottom Banner -->
+  <rect x="120" y="620" width="1560" height="60" rx="8" ry="8" fill="#f5f7fa" stroke="#c8d2dc" stroke-width="1"/>
+  <text x="900" y="646" class="banner-text1">True ICG Clock Gating: Inactive segments have their clock pin (GCLK) physically held at 0.</text>
+  <text x="900" y="668" class="banner-text2">This eliminates internal clock-tree toggling and saves 66.7% of register dynamic clock power in INT4 mode.</text>
+</svg>
