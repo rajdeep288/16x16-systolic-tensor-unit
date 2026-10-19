@@ -15,6 +15,13 @@ venv/
 *.swp
 *~
 
+# Reference documents, patents, and presentations
+*.pdf
+*.pptx
+Patents/
+PPT/
+integer_pla_log_multiplier.png
+
 # EDA / Tool synthesis & simulation temporary files
 *.vcd
 *.vpd

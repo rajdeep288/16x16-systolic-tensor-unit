@@ -41,7 +41,6 @@ A power-aware, precision-scalable **16×16 2D Systolic Tensor Processing Unit** 
 ```
 ├── README.md                      # Project documentation and specifications
 ├── .gitignore                     # Git ignore rules for Python, EDA tools, and temp files
-├── VLSI_Design_Laboratory...pdf   # Official Assignment 2A specification sheet
 ├── reference_model/               # Golden software model & verification suite
 │   ├── tensor_unit_model.py       # Bit-accurate and cycle-accurate systolic array simulator
 │   ├── run_verification.py        # Automated 24-test verification suite across 8 categories
@@ -52,8 +51,6 @@ A power-aware, precision-scalable **16×16 2D Systolic Tensor Processing Unit** 
 │   ├── 16bit_input_register_icg_gated_clock.png  # True ICG gated clock diagram
 │   ├── 36bit_accumulator_segment_clock_enable.png # Segmented accumulator diagram
 │   └── ...
-├── Patents/                       # Literature review and reference patents (Samsung, NVIDIA, Intel)
-├── PPT/                           # Weekly presentation slide decks
 └── rtl/                           # Verilog RTL source files (Week 2 onwards)
 ```
 
